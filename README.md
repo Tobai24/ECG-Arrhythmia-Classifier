@@ -22,8 +22,8 @@ This project aims to develop a machine learning model that classifies arrhythmia
 
 This project uses an ECG dataset from Kaggle, which is based on the **MIT-BIH Arrhythmia Dataset** from PhysioNet. The dataset contains essential features derived from two-lead ECG signals, which are used to train the arrhythmia classification model.
 
-- **Number of records**: 109,446 heartbeats
-- **Number of features**: 19
+- **Number of records**: 963654
+- **Number of features**: 33
 
 For the model-building process, the dataset is preprocessed and stored in CSV files, ready for training and testing.
 
