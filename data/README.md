@@ -13,6 +13,8 @@ The dataset includes features from four ECG arrhythmia datasets:
 3. St. Petersburg INCART 12-lead Arrhythmia Database
 4. Sudden Cardiac Death Holter Database
 
+we would be using the first 3 dataset for building the dataset
+
 > **Kaggle Dataset**: [ECG Arrhythmia Classification Dataset](https://www.kaggle.com/datasets/sadmansakib7/ecg-arrhythmia-classification-dataset/data)
 
 > **Original PhysioNet Dataset**: [MIT-BIH Arrhythmia Dataset](https://physionet.org/content/mitdb/1.0.0/)
@@ -47,6 +49,10 @@ Below is a detailed description of the columns included in the dataset:
 | S peak                | Amplitude of the S wave.                                                                         |
 | Q peak                | Amplitude of the Q wave.                                                                         |
 | QRS morph feature 0–4 | Morphological features of the QRS complex.                                                       |
+
+**0_xxx : lead-II**
+
+**1_xxx : lead-V5**
 
 #### 🚀 Usage
 

@@ -9,6 +9,10 @@ pandas = "*"
 scikit-learn = "*"
 matplotlib = "*"
 requests = "*"
+seaborn = "*"
+xgboost = "*"
+flask = "*"
+gunicorn = "*"
 
 [dev-packages]
 ipykernel = "*"
