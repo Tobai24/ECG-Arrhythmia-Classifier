@@ -1,12 +1,10 @@
-FROM python:3.12-slim
-
-RUN pip install pipenv
+FROM python:3.11-slim
 
 WORKDIR /app
 
-COPY ["Pipfile", "Pipfile.lock", "./"]
+COPY requirements.txt .
 
-RUN pipenv install --system --deploy
+RUN pip install --no-cache-dir -r requirements.txt
 
 COPY ["predict.py", "model.pkl", "./"]
 
