@@ -1,25 +1,27 @@
-### 📊 Dataset Overview
+# 📊 Dataset Overview
 
-#### About the Dataset
+### About the Dataset
 
-This project uses a dataset sourced from Kaggle, which focuses on ECG signal features for arrhythmia classification. The original dataset was derived from the MIT-BIH Arrhythmia Dataset hosted on PhysioNet. It contains features extracted from two-lead ECG signals (lead II and lead V5), focusing on detecting cardiac arrhythmias. The dataset includes programmatically extracted features critical for distinguishing regular and irregular heartbeats.
+This project uses a dataset sourced from Kaggle, which focuses on ECG signal features for arrhythmia classification. The original dataset was derived from the MIT-BIH Arrhythmia Dataset hosted on PhysioNet.
 
-#### 🔗 Dataset Sources
+It contains features extracted from **two-lead ECG signals (lead II and lead V5)**, focusing on detecting cardiac arrhythmias. The dataset includes programmatically extracted features critical for distinguishing regular and irregular heartbeats.
+
+## 🔗 Dataset Sources
 
 The dataset includes features from four ECG arrhythmia datasets:
 
-1. MIT-BIH Supraventricular Arrhythmia Database
-2. MIT-BIH Arrhythmia Database
-3. St. Petersburg INCART 12-lead Arrhythmia Database
+1. MIT-BIH Supraventricular Arrhythmia Database - MIT-BIH Supraventricular Arrhythmia Database.csv
+2. MIT-BIH Arrhythmia Database - MIT-BIH Arrhythmia Database.csv
+3. St. Petersburg INCART 12-lead Arrhythmia Database - INCART_Arrhythmia.csv
 4. Sudden Cardiac Death Holter Database
 
-we would be using the first 3 dataset for building the dataset
+we would be using the first 3 dataset for building the model
 
 > **Kaggle Dataset**: [ECG Arrhythmia Classification Dataset](https://www.kaggle.com/datasets/sadmansakib7/ecg-arrhythmia-classification-dataset/data)
 
 > **Original PhysioNet Dataset**: [MIT-BIH Arrhythmia Dataset](https://physionet.org/content/mitdb/1.0.0/)
 
-#### 🎯 Target Column
+## 🎯 Target Column
 
 The `type` column classifies heartbeats into:
 
@@ -29,7 +31,7 @@ The `type` column classifies heartbeats into:
 - **F**: Fusion beats
 - **Q**: Unknown beats
 
-#### 🧬 Column Descriptions
+## 🧬 Column Descriptions
 
 Below is a detailed description of the columns included in the dataset:
 
@@ -54,11 +56,11 @@ Below is a detailed description of the columns included in the dataset:
 
 **1_xxx : lead-V5**
 
-#### 🚀 Usage
+## 🚀 Usage
 
 This dataset is ideal for training machine learning models to classify cardiac arrhythmias. The consistent feature extraction across the datasets ensures comparability and robustness for predictive modeling.
 
-#### 📚 Citation
+## 📚 Citation
 
 1. **Original Dataset Paper**: [PhysioBank, PhysioToolkit, and PhysioNet: Components of a New Research Resource for Complex Physiologic Signals](http://ecg.mit.edu/george/publications/mitdb-embs-2001.pdf).
 2. **Feature Extraction and Methodology Paper**: [Harnessing Artificial Intelligence for Secure ECG Analytics at the Edge for Cardiac Arrhythmia Classification](https://www.taylorfrancis.com/chapters/edit/10.1201/9781003028635-11/harnessing-artificial-intelligence-secure-ecg-analytics-edge-cardiac-arrhythmia-classification-sadman-sakib-mostafa-fouda-zubair-md-fadlullah).

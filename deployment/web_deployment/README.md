@@ -1,6 +1,4 @@
-# ECG Arrhythmia Classifier
-
-## 🚀 Run Your App Locally with Docker
+## Run Your App Locally with Docker ✨
 
 Follow these steps to get your app running locally in a Docker container:
 
@@ -10,6 +8,8 @@ Follow these steps to get your app running locally in a Docker container:
 cd deployment/web_deployment
 ```
 
+**Please before you do this change the model path in the app.py to this `model.pkl` it might have been changed when deploying the app on streamlit cloud**
+
 ### 2️⃣ Build the Docker Image
 
 Run the following command to build the Docker image:
@@ -17,6 +17,8 @@ Run the following command to build the Docker image:
 ```bash
 docker build -t streamlit-app:latest .
 ```
+
+**Pls make sure your bash is in this folder containing the dockerfile**
 
 ### 3️⃣ Run the Docker Container
 
@@ -38,19 +40,14 @@ http://localhost:8501
 
 ## 🌍 Deploy the App for Free on Streamlit Community Cloud
 
+**Please before you do this change the model path in the app.py to this `deployment/web_deployment/model.pkl` streamlit does not regonize the model without giving this path**
+
 ### 1️⃣ Prepare Your Repository
 
 Ensure your repository contains the following:
 
 - `app.py`: Your Streamlit app code.
 - `requirements.txt`: A file listing the required Python dependencies.
-  - Example:
-    ```txt
-    streamlit==1.25.0
-    numpy
-    pandas
-    scikit-learn
-    ```
 
 ### 2️⃣ Push Your Code to GitHub
 
@@ -69,7 +66,7 @@ Commit and push your code to a GitHub repository.
 
 Once deployed, you’ll receive a unique URL for your app that you can share with others.
 
----
+the url for this app is : https://ecg-arrhythmia-classifier-vx8p25emabtee8b5qzjbt4.streamlit.app/
 
 ## 🎉 Enjoy Your App!
 
