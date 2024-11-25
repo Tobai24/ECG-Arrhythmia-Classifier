@@ -34,7 +34,7 @@ docker build -t arrthymia:v1 .
 Once the Docker image is built, you can run it locally with:
 
 ```bash
-docker run -it -p 9696:9696 arrthymia:v1
+docker run -it --rm -p 9696:9696 arrthymia:v1
 ```
 
 This command will start the container and expose it on port `9696`. You can access your Flask app at `http://localhost:9696`.

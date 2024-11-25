@@ -73,58 +73,10 @@ for col, outlier_data in outliers.items():
 
 print("Encoding the dataset")
 label_encoder = LabelEncoder()
-y_train_encoded = label_encoder.fit_transform(y_train)
-y_val_encoded = label_encoder.transform(y_val)
+y_train_encoded = label_encoder.fit_transform(y_full_train)
+y_test_encoded = label_encoder.transform(y_test)
 
-# Train a Logistic Regression model
-print("Training the linear regression model")
-logreg = LogisticRegression(max_iter=4000, multi_class='multinomial', solver='lbfgs', class_weight='balanced')
-logreg.fit(X_train, y_train_encoded)
-
-# Make predictions on the validation set
-y_pred_encoded = logreg.predict(X_val)
-logreg_probs = logreg.predict_proba(X_val)  # For probabilities
-
-# Evaluate the model's performance
-accuracy = accuracy_score(y_val_encoded, y_pred_encoded)
-print(f"Accuracy: {accuracy:.4f}")
-
-# Display detailed classification report
-print("Classification Report:")
-print(classification_report(y_val_encoded, y_pred_encoded))
-
-# Calculate and display ROC AUC for multiclass
-y_val_binarized = label_binarize(y_val_encoded, classes=list(range(5)))
-auc_score = roc_auc_score(y_val_binarized, logreg_probs, average="macro", multi_class="ovr")
-print(f"Multiclass ROC AUC Score: {auc_score:.4f}")
-print("Done")
-
-
-# Train a Random Forest model
-print("Training the Random forest")
-rf = RandomForestClassifier(n_estimators=100, random_state=42, class_weight='balanced')
-rf.fit(X_train, y_train_encoded)
-
-# Make predictions on the validation set
-y_pred_encoded = rf.predict(X_val)
-rf_probs = rf.predict_proba(X_val)  # For probabilities
-
-# Evaluate the model's performance
-accuracy = accuracy_score(y_val_encoded, y_pred_encoded)
-print(f"Accuracy: {accuracy:.4f}")
-
-# Display detailed classification report
-print("Classification Report:")
-print(classification_report(y_val_encoded, y_pred_encoded))
-
-# Calculate and display ROC AUC for multiclass
-y_val_binarized = label_binarize(y_val_encoded, classes=list(range(5)))
-auc_score = roc_auc_score(y_val_binarized, rf_probs, average="macro", multi_class="ovr")
-print(f"Multiclass ROC AUC Score: {auc_score:.4f}")
-print("Done")
-
-# Create an XGBoost model instance
-print("Training the XGBOOST model")
+print("Training the XGBOOST model, It took about 8 minutes to train when i ran it on my device")
 xgb_model = xgb.XGBClassifier(
     objective='multi:softprob',  
     num_class=5,                
@@ -137,25 +89,26 @@ xgb_model = xgb.XGBClassifier(
 )
 
 # Fit the model on the training data
-xgb_model.fit(X_train, y_train_encoded)
+xgb_model.fit(X_full_train, y_train_encoded)
 
 # Make predictions on the validation set
-y_pred_encoded = xgb_model.predict(X_val)
-xgb_probs = xgb_model.predict_proba(X_val)  # For probabilities
+y_pred_encoded = xgb_model.predict(X_test)
+xgb_probs = xgb_model.predict_proba(X_test)  # For probabilities
 
 # Evaluate the model's performance
-accuracy = accuracy_score(y_val_encoded, y_pred_encoded)
+accuracy = accuracy_score(y_test_encoded, y_pred_encoded)
 print(f"Accuracy: {accuracy:.4f}")
 
 # Display detailed classification report
 print("Classification Report:")
-print(classification_report(y_val_encoded, y_pred_encoded))
+print(classification_report(y_test_encoded, y_pred_encoded))
 
 # Calculate and display ROC AUC for multiclass
-y_val_binarized = label_binarize(y_val_encoded, classes=list(range(5)))
-auc_score = roc_auc_score(y_val_binarized, xgb_probs, average="macro", multi_class="ovr")
+y_test_binarized = label_binarize(y_test_encoded, classes=list(range(5)))
+auc_score = roc_auc_score(y_test_binarized, xgb_probs, average="macro", multi_class="ovr")
 print(f"Multiclass ROC AUC Score: {auc_score:.4f}")
-print("done")
+
+
 
 print("Saving the model")
 with open('model.pkl', 'wb') as f_out:
