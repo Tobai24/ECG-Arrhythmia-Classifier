@@ -26,7 +26,7 @@ This ensures all the required dependencies are installed for your project. Check
 The prediction script has been embedded into a Flask application and packed into a Docker image. To build the Docker image, run:
 
 ```bash
-docker build -t arrthymia:v1 .
+docker build -t heart:v1 .
 ```
 
 ### **Run the Docker Container:**
@@ -34,7 +34,7 @@ docker build -t arrthymia:v1 .
 Once the Docker image is built, you can run it locally with:
 
 ```bash
-docker run -it --rm -p 9696:9696 arrthymia:v1
+docker run -it --rm -p 9696:9696 heart:v1
 ```
 
 This command will start the container and expose it on port `9696`. You can access your Flask app at `http://localhost:9696`.

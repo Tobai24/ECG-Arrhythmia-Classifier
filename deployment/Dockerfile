@@ -1,13 +1,15 @@
-FROM python:3.11-slim
+FROM python:3.12.3-slim
+
+RUN pip install pipenv
 
 WORKDIR /app
 
-COPY requirements.txt .
+COPY ["Pipfile", "Pipfile.lock", "./"]
 
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pipenv install --system --deploy
 
 COPY ["predict.py", "model.pkl", "./"]
 
 EXPOSE 9696
 
-ENTRYPOINT ["gunicorn","--bind=0.0.0.0:9696","predict:app"]
+ENTRYPOINT ["gunicorn", "--bind=0.0.0.0:9696", "predict:app"]
