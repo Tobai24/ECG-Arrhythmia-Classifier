@@ -100,3 +100,22 @@ cd ECG-Arrhythmia-Classifier
 
 - If you use `pipenv`, you do not need to install the `requirements.txt` dependencies manually because `pipenv` reads the `Pipfile` and manages the environment for you.
 - For Debian-based systems, using `sudo apt install pipenv` ensures compatibility with the system Python environment and avoids issues with the "externally managed environment" restriction.
+
+### Exploratory Data Analysis and Modeling
+
+The exploratory data analysis and modeling are done in the [notebooks directory](notebooks/). The exploratory data analysis and model building are done in the `notebook.ipynb` notebook. The notebook directory also contains the model called `model.pkl`, where the model from the `notebook.ipynb` is stored.
+
+## Get Going
+
+Ready to dive into your project? Here’s a quick guide to get you started.
+
+### 📁 **Deployment**
+
+### **Local Deployment**
+
+- **Tools Used**: Flask for building your web app and Docker for containerizing it.
+- **Where to Find It**: Head over to the [deployment](deployment) folder. This README covers everything you need to get your app running locally. It’s got the details for setting up Flask and Docker, so you can test things out on your own machine.
+
+## 🎉 Special Mentions
+
+A huge thank you to [DataTalks.Club](https://datatalks.club) for offering their ML course for free! 🌟 The insights and skills I gained from their course were crucial in developing this project. If you want to enhance your expertise in machine learning, I highly recommend checking out their [course](https://github.com/DataTalksClub/ml-zoomcamp). It’s an invaluable resource for diving into machine learning! 📚✨
