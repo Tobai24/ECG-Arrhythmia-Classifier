@@ -31,7 +31,7 @@ Ready to see how AI can help detect arrhythmias and save lives? Let’s get star
 
 You can check out the live version of the Streamlit app at the following URL:
 
-[Streamlit App](https://ecg-arrhythmia-classifier-vx8p25emabtee8b5qzjbt4.streamlit.app/)
+[Streamlit App](https://heart-class.streamlit.app/)
 
 ### 📸 Screenshot of the App
 

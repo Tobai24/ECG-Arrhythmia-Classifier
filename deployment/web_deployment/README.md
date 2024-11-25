@@ -66,7 +66,7 @@ Commit and push your code to a GitHub repository.
 
 Once deployed, you’ll receive a unique URL for your app that you can share with others.
 
-the url for this app is : https://ecg-arrhythmia-classifier-vx8p25emabtee8b5qzjbt4.streamlit.app/
+the url for this app is : https://heart-class.streamlit.app/
 
 ## 🎉 Enjoy Your App!
 
