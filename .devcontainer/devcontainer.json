@@ -6,15 +6,13 @@
     "codespaces": {
       "openFiles": [
         "README.md",
-        "deployment/web_deployment/app.py"
+        "deployment/web_deployment/app.py",
+        "deployment/web_deployment/model.pkl"
       ]
     },
     "vscode": {
       "settings": {},
-      "extensions": [
-        "ms-python.python",
-        "ms-python.vscode-pylance"
-      ]
+      "extensions": ["ms-python.python", "ms-python.vscode-pylance"]
     }
   },
   "updateContentCommand": "[ -f packages.txt ] && sudo apt update && sudo apt upgrade -y && sudo xargs apt install -y <packages.txt; [ -f requirements.txt ] && pip3 install --user -r requirements.txt; pip3 install --user streamlit; echo '✅ Packages installed and Requirements met'",
@@ -27,7 +25,5 @@
       "onAutoForward": "openPreview"
     }
   },
-  "forwardPorts": [
-    8501
-  ]
+  "forwardPorts": [8501]
 }
