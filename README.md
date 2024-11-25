@@ -31,14 +31,23 @@ For more detailed information about the dataset, including explanations of the c
 
 Ready to see how AI can help detect arrhythmias and save lives? Let’s get started! ✨
 
+## 🎉 Live Streamlit App
+
+You can check out the live version of the Streamlit app at the following URL:
+
+[Streamlit App](https://streamlit-app-brrxtoum2a-uc.a.run.app/)
+
+### 📸 Screenshot of the App
+
+![Streamlit App Screenshot](image/image.png)
+
 ## 🔧 Tools & Techniques
 
 To bring this project to life, I used:
 
-- **MLflow** for experiment tracking
-- **Flask** for building a lightweight API
-- **Docker** for containerizing the pipeline
-- **Evidently AI** for monitoring model performance and detecting data drift
+- **Flask**
+- **Docker**
+- **Streamlit**
 
 This ensures the project is scalable, transparent, and easy to maintain.
 
