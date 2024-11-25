@@ -2,8 +2,10 @@ import streamlit as st
 import pickle
 import numpy as np
 
+model_path = 'deployment/web_deployment/model.pkl'
+
 # Load the trained model
-with open('model.pkl', 'rb') as f_in:
+with open(model_path, 'rb') as f_in:
     model = pickle.load(f_in)
 
 # Define the mapping for decoding labels
