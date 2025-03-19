@@ -8,3 +8,10 @@ xgboost
 flask
 gunicorn
 streamlit
+prefect
+tqdm
+joblib
+pyarrow
+psycopg
+psycopg_binary
+evidently 
