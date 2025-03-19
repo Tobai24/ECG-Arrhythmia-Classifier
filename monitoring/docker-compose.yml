@@ -27,7 +27,7 @@ services:
     image: adminer:latest
     restart: always
     ports:
-      - "8080:8080"
+      - "8087:8080"
     networks:
       - back-tier
       - front-tier
@@ -38,7 +38,7 @@ services:
     image: grafana/grafana-oss:latest
     user: "472"
     ports:
-      - "3000:3000"
+      - "3002:3000"
     environment:
       - GF_SECURITY_ADMIN_USER=admin
       - GF_SECURITY_ADMIN_PASSWORD=admin
