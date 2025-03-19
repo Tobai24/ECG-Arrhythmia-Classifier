@@ -8,10 +8,10 @@ datasources:
     type: postgres
     access: proxy
     url: db:5432
-    database: test
-    user: postgres
+    database: airflow
+    user: airflow
     secureJsonData:
-      password: "example"
+      password: "airflow"
     jsonData:
       sslmode: "disable"
-      database: test
+      database: airflow

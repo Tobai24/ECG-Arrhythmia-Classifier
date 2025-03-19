@@ -1,0 +1,16 @@
+{
+  "id": "0195b0a9-25c7-7406-b310-b0d040b7b92a",
+  "name": "arrythmia classifier",
+  "description": "My project description",
+  "dashboard": {
+    "name": "arrythmia classifier",
+    "panels": [],
+    "tabs": [],
+    "tab_id_to_panel_ids": {}
+  },
+  "team_id": null,
+  "org_id": null,
+  "date_from": null,
+  "date_to": null,
+  "created_at": "2025-03-19T23:07:10.152044"
+}

@@ -19,6 +19,7 @@ joblib = "*"
 pyarrow = "*"
 psycopg-binary = "*"
 evidently = "*"
+psycopg = "*"
 
 [dev-packages]
 ipykernel = "*"
